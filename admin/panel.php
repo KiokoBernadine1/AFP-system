@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['adminId'])) {
+    header("location: ../index.php?error=notadmin");
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -12,16 +18,23 @@
     <header>
         <nav class="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="/index.php">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <?php if (isset($_SESSION['passengerId'])) {
+                    echo '<li><a href="/auth/logout.php">Log out</a></li>';
+                } elseif (isset($_SESSION['adminId'])) {
+                    echo '<li><a href="/auth/logout.php">Log out</a></li>';
+                } else {
+                    echo '<li><a href="/passenger/login.php">Log In</a></li>';
+                }
+                ?>
             </ul>
         </nav>
     </header>
 
     <h1 class="page-header">Admin Panel</h1>
-    
+
     <main>
 
     </main>

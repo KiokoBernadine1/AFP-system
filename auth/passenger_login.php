@@ -1,4 +1,5 @@
 <?php
+session_start();
 // check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // get the user inputs
@@ -16,7 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashed_password = $row["password"];
     if (password_verify($password, $hashed_password)) {
       // if password is correct, log the user in
-      echo "Passenger login successful!";
+      $_SESSION['passengerId'] = $row["passenger_id"];
+      $_SESSION['passengerUsername'] = $row["username"];
+      header("location: ../passenger/dashboard.php?success=successfullogin");
     } else {
       // if password is incorrect, display an error message
       header("location: ../passenger/login.php?error=invalidcredentials");

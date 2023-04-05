@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['passengerId'])) {
+    header("location: ../passenger/dashboard.php?error=passengeralreadyloggedin");
+} elseif (isset($_SESSION['adminId'])) {
+    header("location: ../admin/panel.php?error=adminalreadyloggedin");
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -12,10 +20,17 @@
     <header>
         <nav class="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="/index.php">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <?php if (isset($_SESSION['passengerId'])) {
+                    echo '<li><a href="/auth/logout.php">Log out</a></li>';
+                } elseif (isset($_SESSION['adminId'])) {
+                    echo '<li><a href="/auth/logout.php">Log out</a></li>';
+                } else {
+                    echo '<li><a href="/passenger/login.php">Log In</a></li>';
+                }
+                ?>
             </ul>
         </nav>
     </header>

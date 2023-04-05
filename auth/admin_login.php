@@ -1,4 +1,5 @@
 <?php
+session_start();
 // check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // get the user inputs
@@ -16,7 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashed_password = $row["password"];
     if (password_verify($password, $hashed_password)) {
       // if password is correct, log the user in
-      echo "Admin login successful!";
+      $_SESSION['adminId'] = $row["admin_id"];
+      $_SESSION['adminUsername'] = $row["username"];
+      header("location: ../admin/panel.php?success=successfullogin");
     } else {
       // if password is incorrect, display an error message
       header("location: ../admin/login.php?error=invalidcredentials");
