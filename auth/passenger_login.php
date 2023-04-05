@@ -19,11 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo "Passenger login successful!";
     } else {
       // if password is incorrect, display an error message
-      echo "Incorrect username/email or password.";
+      header("location: ../passenger/login.php?error=invalidcredentials");
     }
   } else {
     // if user does not exist, display an error message
-    echo "Incorrect username/email or password.";
+    header("location: ../passenger/login.php?error=invalidcredentials");
   }
 
   // close the database connection

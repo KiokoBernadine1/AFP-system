@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($conn, $query);
     if (mysqli_num_rows($result) > 0) {
         // if user already exists, display an error message
-        echo "User already exists in the database.";
+        header("location: ../passenger/register.php?error=userexists");
     } else {
         // if user does not exist, insert user information into the database
         $query = "INSERT INTO passengers (username, email, password) VALUES ('$username', '$email', '$hashed_password')";

@@ -19,11 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo "Admin login successful!";
     } else {
       // if password is incorrect, display an error message
-      echo "Incorrect username/email or password.";
+      header("location: ../admin/login.php?error=invalidcredentials");
     }
   } else {
     // if user does not exist, display an error message
-    echo "Incorrect username/email or password.";
+    header("location: ../admin/login.php?error=invalidcredentials");
   }
 
   // close the database connection
