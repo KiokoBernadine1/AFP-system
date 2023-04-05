@@ -21,16 +21,7 @@ if (isset($_SESSION['passengerId'])) {
         <nav class="navbar">
             <ul>
                 <li><a href="/index.php">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <?php if (isset($_SESSION['passengerId'])) {
-                    echo '<li><a href="/auth/logout.php">Log out</a></li>';
-                } elseif (isset($_SESSION['adminId'])) {
-                    echo '<li><a href="/auth/logout.php">Log out</a></li>';
-                } else {
-                    echo '<li><a href="/passenger/login.php">Log In</a></li>';
-                }
-                ?>
+                <li><a href="/passenger/login.php">Log In (Passenger)</a></li>
             </ul>
         </nav>
     </header>
@@ -39,14 +30,14 @@ if (isset($_SESSION['passengerId'])) {
 
     <main>
 
-        <form action="/auth/admin_login.php" method="post">
+        <form class="auth_form" action="/auth/admin_login.php" method="post">
             <label for="username_email">Username:</label>
-            <input type="text" id="username_email" name="username_email">
+            <input class="auth-text" type="text" id="username_email" name="username_email">
             <br>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
+            <input class="auth-password" type="password" id="password" name="password">
             <br>
-            <input type="submit" value="Submit">
+            <input class="auth-submit" type="submit" value="Submit">
         </form>
 
         <div class="account-links">

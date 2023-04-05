@@ -20,9 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("location: ../passenger/register.php?error=userexists");
     } else {
         // if user does not exist, insert user information into the database
-        $query = "INSERT INTO passengers (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
+        $query = "INSERT INTO passengers (username, email, password) VALUES ('$username', '$email', '$hashed_password');";
         if (mysqli_query($conn, $query)) {
-            echo "User has been successfully added to the database.";
+            $query2 = "INSERT INTO accounts (passenger) VALUES ('$username');";
+            if (mysqli_query($conn, $query2)) {
+                header("location: ../passenger/register.php?success=usercreated");
+            }
         } else {
             echo "Error: " . $query . "<br>" . mysqli_error($conn);
         }

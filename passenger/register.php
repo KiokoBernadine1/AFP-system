@@ -39,17 +39,17 @@ if (isset($_SESSION['passengerId'])) {
 
     <main>
 
-        <form action="/auth/passenger_register.php" method="post">
+        <form class="auth_form" action="/auth/passenger_register.php" method="post">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
+            <input class="auth-text" type="text" id="username" name="username">
             <br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input class="auth-email" type="email" id="email" name="email">
             <br>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
+            <input class="auth-password" type="password" id="password" name="password">
             <br>
-            <input type="submit" id="submit" value="Submit">
+            <input class="auth-submit" type="submit" id="submit" value="Submit">
         </form>
 
         <div class="account-links">

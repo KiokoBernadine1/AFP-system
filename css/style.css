@@ -40,7 +40,7 @@ main {
 }
 
 /* Center the form on the page */
-form {
+.auth_form {
     max-width: 400px;
     margin: 0 auto;
 }
@@ -53,9 +53,9 @@ label {
 }
 
 /* Style the form inputs */
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+.auth-text,
+.auth-password,
+.auth-email {
     display: block;
     width: 100%;
     padding: 10px;
@@ -66,7 +66,7 @@ input[type="password"] {
 }
 
 /* Style the form submit button */
-input[type="submit"] {
+.auth-submit {
     display: block;
     width: 100%;
     padding: 10px;
@@ -79,7 +79,7 @@ input[type="submit"] {
 }
 
 /* Style the form submit button on hover */
-input[type="submit"]:hover {
+.auth-submit:hover {
     background-color: #0062cc;
 }
 
@@ -109,4 +109,128 @@ input[type="submit"]:hover {
 .login-account:hover {
     background-color: #0056b3;
     color: #fff;
+}
+
+
+/* Style for form elements */
+#input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.route-input,
+#route-submit {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0;
+}
+
+.route-input {
+    width: 25%;
+}
+
+#route-submit {
+    width: 15%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#route-submit:hover {
+    background-color: #3e8e41;
+}
+
+.route-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.route-table th,
+.route-table td {
+    padding: 4px;
+    border: 1px solid #ddd;
+}
+
+.route-table th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+}
+
+.route-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.route-delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.route-delete:hover {
+    background-color: #d32f2f;
+}
+
+/* Set width to 100% and remove default border spacing */
+.balances-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style the table headers */
+.balance-table-headers {
+    background-color: #333;
+    color: white;
+    text-align: left;
+}
+
+.balance-table-headers th {
+    padding: 12px;
+}
+
+/* Style the table rows */
+.balances-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.balances-table tr:last-child {
+    border-bottom: none;
+}
+
+/* Style the table cells */
+.balances-table td {
+    padding: 4px;
+}
+
+/* Style the update button */
+.balances-table button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#balance {
+    min-width: 40px;
+    min-height: 25px;
+}
+
+.balances-table button:hover {
+    background-color: #3e8e41;
 }

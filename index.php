@@ -16,14 +16,15 @@ session_start();
         <nav class="navbar">
             <ul>
                 <li><a href="/index.php">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
                 <?php if (isset($_SESSION['passengerId'])) {
                     echo '<li><a href="/auth/logout.php">Log out</a></li>';
                 } elseif (isset($_SESSION['adminId'])) {
+                    echo '<li><a href="/admin/panel.php">Panel</a></li>';
+                    echo '<li><a href="/admin/balances.php">Balances</a></li>';
+                    echo '<li><a href="/admin/route.php">Routes</a></li>';
                     echo '<li><a href="/auth/logout.php">Log out</a></li>';
                 } else {
-                    echo '<li><a href="/passenger/login.php">Log In</a></li>';
+                    echo '<li><a href="/passenger/login.php">Log In (Passenger)</a></li>';
                 }
                 ?>
             </ul>
