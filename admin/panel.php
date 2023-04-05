@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>AFPS</title>
+    <title>Admin Panel</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -20,7 +20,7 @@
         </nav>
     </header>
 
-    <h1 class="page-header">Page Title</h1>
+    <h1 class="page-header">Admin Panel</h1>
     
     <main>
 

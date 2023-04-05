@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>AFPS</title>
+    <title>Admin Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -20,9 +20,23 @@
         </nav>
     </header>
 
-    <h1 class="page-header">Page Title</h1>
-    
+    <h1 class="page-header">Admin Login</h1>
+
     <main>
+
+        <form action="/auth/admin_login.php" method="post">
+            <label for="username_email">Username:</label>
+            <input type="text" id="username_email" name="username_email">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="account-links">
+            <a href="/admin/register.php" class="create-account">Create an account</a>
+        </div>
 
     </main>
     <footer>
