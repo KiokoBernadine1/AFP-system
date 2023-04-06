@@ -17,6 +17,8 @@ session_start();
             <ul>
                 <li><a href="/index.php">Home</a></li>
                 <?php if (isset($_SESSION['passengerId'])) {
+                    echo '<li><a href="/passenger/transactions.php">Transaction History</a></li>';
+                    echo '<li><a href="/passenger/booking.php">Book a Journey</a></li>';
                     echo '<li><a href="/auth/logout.php">Log out</a></li>';
                 } elseif (isset($_SESSION['adminId'])) {
                     echo '<li><a href="/admin/panel.php">Panel</a></li>';

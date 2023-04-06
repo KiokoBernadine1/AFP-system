@@ -231,6 +231,42 @@ label {
     min-height: 25px;
 }
 
-.balances-table button:hover {
+#booking-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .book-select {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  #book-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #book-button:hover {
     background-color: #3e8e41;
-}
+  }
+  
