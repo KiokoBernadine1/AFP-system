@@ -19,12 +19,12 @@ session_start();
                 <?php if (isset($_SESSION['passengerId'])) {
                     echo '<li><a href="/passenger/transactions.php">Transaction History</a></li>';
                     echo '<li><a href="/passenger/booking.php">Book a Journey</a></li>';
-                    echo '<li><a href="/auth/logout.php">Log out</a></li>';
+                    echo '<li><a href="/auth/passenger_logout.php">Log out</a></li>';
                 } elseif (isset($_SESSION['adminId'])) {
                     echo '<li><a href="/admin/transactions.php">Transactions</a></li>';
                     echo '<li><a href="/admin/balances.php">Balances</a></li>';
                     echo '<li><a href="/admin/route.php">Routes</a></li>';
-                    echo '<li><a href="/auth/logout.php">Log out</a></li>';
+                    echo '<li><a href="/auth/admin_logout.php">Log out</a></li>';
                 } else {
                     echo '<li><a href="/passenger/login.php">Log In (Passenger)</a></li>';
                 }

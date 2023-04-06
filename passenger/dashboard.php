@@ -21,7 +21,7 @@ if (!isset($_SESSION['passengerId'])) {
                 <li><a href="/index.php">Home</a></li>
                 <li><a href="/passenger/transactions.php">Transaction History</a></li>
                 <li><a href="/passenger/booking.php">Book a Journey</a></li>
-                <li><a href="/auth/logout.php">Log out</a></li>
+                <li><a href="/auth/passenger_logout.php">Log out</a></li>
             </ul>
         </nav>
     </header>

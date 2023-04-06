@@ -30,7 +30,7 @@ $result = mysqli_query($conn, $sql);
                 <li><a href="/admin/balances.php">Balances</a></li>
                 <li><a href="/admin/route.php">Routes</a></li>
                 <li><a href="/admin/psv.php">PSVs</a></li>
-                <li><a href="/auth/logout.php">Log out</a></li>
+                <li><a href="/auth/admin_logout.php">Log out</a></li>
             </ul>
         </nav>
     </header>
