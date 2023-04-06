@@ -1,1 +1,5 @@
+vendor
 db_conn.php
+.env
+composer.json
+composer.lock
