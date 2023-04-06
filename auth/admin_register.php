@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // if user does not exist, insert user information into the database
         $query = "INSERT INTO admins (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
         if (mysqli_query($conn, $query)) {
-            echo "Admin has been successfully added to the database.";
+            header("location: ../admin/login.php?success=adminregistered");
         } else {
             echo "Error: " . $query . "<br>" . mysqli_error($conn);
         }
