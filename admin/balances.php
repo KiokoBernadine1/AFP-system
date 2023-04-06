@@ -44,14 +44,16 @@ $result = mysqli_query($conn, $sql);
                 <tr class="balance-table-headers">
                     <th scope="col">Passenger</th>
                     <th scope="col">Balance</th>
+                    <th scope="col">Add Deposit</th>
                 </tr>
                 <?php foreach ($result as $row) : ?>
                     <tr>
                         <td><?php echo $row["passenger"] ?></td>
+                        <td><?php echo $row["balance"] ?></td>
                         <td>
                             <form action="/form_submit/balance_update.php" method="post">
                                 <input type="hidden" name="accounttoupdate" value='<?php echo $row["account_id"] ?>'>
-                                <input type="text" name="balance" id="balance" value='<?php echo $row["balance"] ?>'>
+                                <input type="text" name="deposit" id="deposit" placeholder="Enter deposit ammount">
                                 <button class="" type="submit">Update</button>
                             </form>
                         </td>
