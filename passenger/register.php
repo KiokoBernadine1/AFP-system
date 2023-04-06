@@ -19,8 +19,6 @@ if (isset($_SESSION['passengerId'])) {
         <nav class="navbar">
             <ul>
                 <li><a href="/index.php">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
                 <?php if (isset($_SESSION['passengerId'])) {
                     echo '<li><a href="/auth/logout.php">Log out</a></li>';
                 } elseif (isset($_SESSION['adminId'])) {

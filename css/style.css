@@ -336,68 +336,113 @@ select {
 
 /* Style for the form */
 #psv-form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 /* Style for the input fields */
 .psv-input {
-  margin: 0 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 200px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: #555;
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 200px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #555;
 }
 
 /* Style for the select field */
 .psv-input select {
-  margin: 0 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 200px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: #555;
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 200px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #555;
 }
 
 /* Style for the submit button */
 #route-submit {
-  margin: 0 10px;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
 /* Hover effect for the submit button */
 #route-submit:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
 /* Style for the input-group div */
 #input-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 /* Style for the form items to show on the same line */
-#psv_id, #make, #model, select {
-  flex: 0 0 auto;
+#psv_id,
+#make,
+#model,
+select {
+    flex: 0 0 auto;
+}
+
+/* Styles for main container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styles for headers */
+.info-header {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Styles for paragraphs */
+.info-paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Styles for list items */
+.info-list {
+    margin-left: 20px;
+}
+
+.info-list-item {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Styles for links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }

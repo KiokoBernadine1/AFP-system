@@ -37,8 +37,25 @@ session_start();
 
     <h1 class="page-header">Home Page</h1>
 
-    <main>
+    <main class="container">
+        <p class="info-paragraph">Our fare booking system is a convenient and easy-to-use platform for booking fares for multiple tickets to various destinations. With our system, you can easily register and login to book fares, view your balances, and keep track of your transaction histories.</p>
 
+        <h2 class="info-header">Our Mission</h2>
+        <p class="info-paragraph">Our mission is to provide a user-friendly platform that simplifies the process of booking fares for passengers. We strive to offer a seamless experience for all users, with a focus on security, reliability, and accessibility.</p>
+
+        <h2 class="info-header">Features</h2>
+        <p class="info-paragraph">Our fare booking system offers the following features:</p>
+        <ul class="info-list">
+            <li class="info-list-item">Easy registration and login process</li>
+            <li class="info-list-item">Booking fares for multiple tickets to various destinations</li>
+            <li class="info-list-item">Viewing balances and transaction histories</li>
+        </ul>
+
+        <h2 class="info-header">Our Team</h2>
+        <p class="info-paragraph">Our team consists of experienced developers who are passionate about creating innovative solutions for the travel industry. We are dedicated to providing top-quality services and support to all our users.</p>
+
+        <h2 class="info-header">Contact Us</h2>
+        <p class="info-paragraph">If you have any questions or concerns about our fare booking system, please don't hesitate to contact us. You can reach us via email at support@farebookingsystem.com, or by phone at 555-1234.</p>
     </main>
     <footer>
         <p>&copy; 2023 Automated Fare Payment System. All rights reserved.</p>
