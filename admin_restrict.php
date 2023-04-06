@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($entered_secret_key === $secret_key) {
         // If the secret key is correct, redirect the user to the admin registration page
         $_SESSION['authenticated'] = true;
-        header('Location: admin/register.php?error=adminverified');
+        header('Location: admin/register.php?success=adminverified');
         exit();
     } else {
         // If the secret key is incorrect, display an error message
