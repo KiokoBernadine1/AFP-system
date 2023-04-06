@@ -22,11 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       header("location: ../passenger/dashboard.php?success=successfullogin");
     } else {
       // if password is incorrect, display an error message
-      header("location: ../passenger/login.php?error=invalidcredentials");
+      header("location: ../passenger/login.php?error=invalidcredentialsp");
     }
   } else {
     // if user does not exist, display an error message
-    header("location: ../passenger/login.php?error=invalidcredentials");
+    header("location: ../passenger/login.php?error=invalidcredentialsu");
   }
 
   // close the database connection
