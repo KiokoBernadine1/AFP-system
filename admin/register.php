@@ -1,8 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['passengerId'])) {
-    header("location: ../passenger/dashboard.php?error=passengeralreadyloggedin");
-} elseif (isset($_SESSION['adminId'])) {
+if (isset($_SESSION['adminId'])) {
     header("location: ../admin/transactions.php?error=adminalreadyloggedin");
 }
 ?>
