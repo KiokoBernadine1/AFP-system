@@ -26,7 +26,8 @@ if (isset($_SESSION['passengerId'])) {
                 } elseif (isset($_SESSION['adminId'])) {
                     echo '<li><a href="/auth/logout.php">Log out</a></li>';
                 } else {
-                    echo '<li><a href="/passenger/login.php">Log In</a></li>';
+                    echo '<li><a href="/passenger/login.php">Log In (Passenger)</a></li>';
+                    echo '<li><a href="/admin/login.php">Log In (Admin)</a></li>';
                 }
                 ?>
             </ul>

@@ -27,6 +27,7 @@ session_start();
                     echo '<li><a href="/auth/admin_logout.php">Log out</a></li>';
                 } else {
                     echo '<li><a href="/passenger/login.php">Log In (Passenger)</a></li>';
+                    echo '<li><a href="/passenger/register.php">Register (Passenger)</a></li>';
                     echo '<li><a href="/admin/login.php">Log In (admin)</a></li>';
                 }
                 ?>

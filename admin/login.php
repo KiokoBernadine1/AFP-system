@@ -20,6 +20,7 @@ if (isset($_SESSION['adminId'])) {
             <ul>
                 <li><a href="/index.php">Home</a></li>
                 <li><a href="/passenger/login.php">Log In (Passenger)</a></li>
+                <li><a href="/admin/login.php">Log In (Admin)</a></li>
             </ul>
         </nav>
     </header>
