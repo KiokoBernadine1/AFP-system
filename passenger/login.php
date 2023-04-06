@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['passengerId'])) {
     header("location: ../passenger/dashboard.php?error=passengeralreadyloggedin");
 } elseif (isset($_SESSION['adminId'])) {
-    header("location: ../admin/panel.php?error=adminalreadyloggedin");
+    header("location: ../admin/transactions.php?error=adminalreadyloggedin");
 }
 ?>
 <!DOCTYPE html>

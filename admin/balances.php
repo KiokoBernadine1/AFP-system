@@ -26,9 +26,10 @@ $result = mysqli_query($conn, $sql);
         <nav class="navbar">
             <ul>
                 <li><a href="/index.php">Home</a></li>
-                <li><a href="/admin/panel.php">Panel</a></li>
+                <li><a href="/admin/transactions.php">Transactions</a></li>
                 <li><a href="/admin/balances.php">Balances</a></li>
                 <li><a href="/admin/route.php">Routes</a></li>
+                <li><a href="/admin/psv.php">PSVs</a></li>
                 <li><a href="/auth/logout.php">Log out</a></li>
             </ul>
         </nav>

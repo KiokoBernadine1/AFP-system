@@ -7,6 +7,10 @@ if (!isset($_SESSION['adminId'])) {
 require "../db_conn.php";
 
 // SELECT query to fetch all routes
+$sql = "SELECT * FROM psvs";
+$psv_result = mysqli_query($conn, $sql);
+
+// SELECT query to fetch all routes
 $sql = "SELECT * FROM routes";
 $result = mysqli_query($conn, $sql);
 ?>
@@ -15,7 +19,7 @@ $result = mysqli_query($conn, $sql);
 <html>
 
 <head>
-    <title>Routes</title>
+    <title>PSVs</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -35,26 +39,28 @@ $result = mysqli_query($conn, $sql);
         </nav>
     </header>
 
-    <h1 class="page-header">Route Panel</h1>
+    <h1 class="page-header">PSVs Panel</h1>
 
     <main>
 
         <table class="route-table">
             <tbody>
                 <tr class="route-table-headers">
+                    <th scope="col">ID</th>
+                    <th scope="col">Make</th>
+                    <th scope="col">Model</th>
                     <th scope="col">Route</th>
-                    <th scope="col">Destination</th>
-                    <th scope="col">Cost</th>
                     <th scope="col">Actions</th>
                 </tr>
-                <?php foreach ($result as $row) : ?>
+                <?php foreach ($psv_result as $row) : ?>
                     <tr>
+                        <td><?php echo $row["psv_id"] ?></td>
+                        <td><?php echo $row["make"] ?></td>
+                        <td><?php echo $row["model"] ?></td>
                         <td><?php echo $row["route_name"] ?></td>
-                        <td><?php echo $row["destination"] ?></td>
-                        <td><?php echo $row["cost"] ?></td>
                         <td>
-                            <form action="/form_submit/route_delete.php" method="post">
-                                <input type="hidden" name="routetodelete" value="<?php echo $row["route_id"] ?>">
+                            <form action="/form_submit/psv_delete.php" method="post">
+                                <input type="hidden" name="psvtodelete" value="<?php echo $row["psv_id"] ?>">
                                 <button class="route-delete" type="submit">Delete</button>
                             </form>
                         </td>
@@ -64,13 +70,19 @@ $result = mysqli_query($conn, $sql);
         </table>
 
 
-        <h3 id="new-route-title">New Route</h3>
-        <form id="route-form" action="/form_submit/route_create.php" method="post">
+        <h3 id="new-route-title">New PSV</h3>
+        <form id="route-form" action="/form_submit/psv_create.php" method="post">
             <div id="input-group">
-                <input class="route-input" type="text" id="route_name" name="route_name" required placeholder="Route Name">
-                <input class="route-input" type="text" id="destination" name="destination" required placeholder="Destination">
-                <input class="route-input" type="number" id="cost" name="cost" required placeholder="Cost">
-                <input type="hidden" name="admin" value="<?php echo $_SESSION['adminUsername']; ?>">
+                <input class="route-input" type="text" id="psv_id" name="psv_id" required placeholder="ID">
+                <input class="route-input" type="text" id="make" name="make" required placeholder="Make">
+                <input class="route-input" type="text" id="model" name="model" required placeholder="Model">
+                <select name="route_name" class="route-input">
+                    <?php foreach ($result as $row) : ?>
+                        <option value="<?php echo $row["route_name"]; ?>">
+                            <?php echo $row["route_name"]; ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
                 <input id="route-submit" type="submit" value="Submit">
             </div>
         </form>

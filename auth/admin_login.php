@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // if password is correct, log the user in
       $_SESSION['adminId'] = $row["admin_id"];
       $_SESSION['adminUsername'] = $row["username"];
-      header("location: ../admin/panel.php?success=successfullogin");
+      header("location: ../admin/transactions.php?success=successfullogin");
     } else {
       // if password is incorrect, display an error message
       header("location: ../admin/login.php?error=invalidcredentials");
