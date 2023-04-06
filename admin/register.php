@@ -4,7 +4,7 @@ if (!isset($_SESSION['authenticated']) || !$_SESSION['authenticated']) {
     header('Location: ../admin_restrict.php?error=not_athenticated');
     exit();
 }
-SECRET_KEY="79B3257F3873EBF915BEE8C872A3A"
+
 if (isset($_SESSION['adminId'])) {
     header("location: ../admin/transactions.php?error=adminalreadyloggedin");
 }
