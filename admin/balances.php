@@ -7,7 +7,7 @@ if (!isset($_SESSION['adminId'])) {
 require "../db_conn.php";
 
 // SELECT query to fetch all routes
-$sql = "SELECT * FROM accounts";
+$sql = "SELECT account_id, passenger, balance FROM accounts";
 $result = mysqli_query($conn, $sql);
 ?>
 
